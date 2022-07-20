@@ -1,24 +1,27 @@
 package com.yacine.gidparis.entities;
 
+import jdk.jfr.Timestamp;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
-@Data @AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor @NoArgsConstructor
 public class Sites implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String designation;
     private double longitude,latitude,altitude;
     private String adresse;
-    @DateTimeFormat
-    private String heureOuverture;
-    private String heureFeremeture;
+    @Timestamp
+    private int heureOuverture;
+    private int heureFeremeture;
 
 
 }
