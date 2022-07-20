@@ -1,0 +1,5 @@
+.nav {
+position: right;
+color: blue;
+width: auto;
+}
