@@ -12,6 +12,7 @@ import java.io.Serializable;
 @Data @AllArgsConstructor @NoArgsConstructor
 public class Sites implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //déclaration de variables
     private Long id;
     private String designation;
     private double longitude,latitude,altitude;
