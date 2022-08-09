@@ -19,6 +19,7 @@ public class Sites implements Serializable {
     private String designation;
     private double longitude,latitude,altitude;
     private String adresse;
+    private String ville;
     @Timestamp
     private int heureOuverture;
     private int heureFeremeture;
